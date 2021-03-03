@@ -8,6 +8,7 @@ import ua.polina.review_service.entity.Review;
 import ua.polina.review_service.service.MovieService;
 import ua.polina.review_service.service.UserService;
 
+@Mapper(componentModel = "spring")
 public interface ReviewMapper {
     Review reviewDtoToReview(ReviewDto dto);
 }

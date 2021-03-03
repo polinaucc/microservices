@@ -30,7 +30,4 @@ public class Movie {
 
     @Column(name = "release_date")
     private LocalDate releaseDate;
-
-    @OneToMany(mappedBy = "movie")
-    private List<Review> reviews;
 }

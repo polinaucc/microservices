@@ -19,13 +19,11 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @JoinColumn(name = "user_id")
-    @ManyToOne(fetch = FetchType.LAZY)
-    private User user;
+    @Column(name = "user_id")
+    private Long userId;
 
-    @JoinColumn(name = "movie_id")
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Movie movie;
+    @Column(name = "movie_id")
+    private Long movieId;
 
     @Column(name = "rating")
     private Integer rating;

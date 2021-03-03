@@ -28,7 +28,4 @@ public class User {
 
     @Column(name = "last_name")
     private String lastName;
-
-    @OneToMany(mappedBy = "user")
-    private List<Review> reviews;
 }
