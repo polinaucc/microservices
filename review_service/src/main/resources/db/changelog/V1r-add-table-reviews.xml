@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="1r" author="Polina Serhiienko">
+        <createTable tableName="review">
+            <column name="id" type="serial">
+                <constraints primaryKeyName="id_pk"/>
+            </column>
+            <column name="user_id" type="integer">
+                <constraints foreignKeyName="user_Fk" references="users(id)"/>
+            </column>
+            <column name="movie_id" type="integer">
+                <constraints foreignKeyName="movie_Fk" references="movie(id)"/>
+            </column>
+            <column name="rating" type="integer"/>
+            <column name="comment" type="varchar"/>
+        </createTable>
+
+        <addPrimaryKey tableName="review" columnNames="id"/>
+    </changeSet>
+</databaseChangeLog>
